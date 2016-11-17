@@ -96,6 +96,21 @@ Closes the current connection.
 
 In case of success, returns 1. In case of errors, returns nil with a string describing the error.
 
+send_command
+------------
+`syntax: ok, err = sl:send_command(params)`
+
+Send the system commands to be executed to the local unix domain socket.
+
+* `params`
+it is a lua table. The *cmd* field specifies the command to execute.
+
+read_response
+-------------
+`syntax: status, out, err = sl:read_response()`
+
+To receive the result of the executed command.
+
 See Also
 ========
 * the ngx_lua module: https://github.com/openresty/lua-nginx-module/#readme
