@@ -33,7 +33,7 @@ openresty config:
                     cmd = "uname -a",
                 }
 
-                local sl = sock.new()
+                local sl = shell.new()
                 if not sl then
                     return
                 end
